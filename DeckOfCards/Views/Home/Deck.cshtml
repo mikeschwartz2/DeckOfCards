@@ -1,0 +1,15 @@
+﻿@model Deck
+@{
+    ViewData["Title"] = "Deck";
+}
+
+<h1>Deck</h1>
+
+
+<p>
+    Deck ID: @Model.Deck_Id
+</p>
+<p>
+    Cards Remaining: @Model.Remaining
+</p>
+<a href="/Home/Cards/@Model.Deck_Id">Draw 5 Cards</a>

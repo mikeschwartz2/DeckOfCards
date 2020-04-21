@@ -1,0 +1,22 @@
+﻿@model CardList
+@{
+    ViewData["Title"] = "Cards";
+
+}
+
+<h1>Hand of Cards</h1>
+
+<div class="row">
+    @foreach (Hand c in Model.Cards)
+    {
+        <div class="col-md-2">
+            <img src="@c.Image" alt="card" />
+            <h3>@c.Value of @c.Suit</h3>
+        </div>
+    }
+</div>
+<hr />
+<a href="/Home/Cards/" class="btn btn-primary">Draw 5 Cards</a>&nbsp;&nbsp;
+<a href="/Home/Deck/" class="btn btn-secondary">Create New Deck</a>
+
+
